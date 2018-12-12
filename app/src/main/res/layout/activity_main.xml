@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jblearning.doneproject.MainActivity">
+    <TextureView
+        android:id="@+id/texture"
+        android:layout_width="360dp"
+        android:layout_height="420dp"
+        android:layout_above="@+id/btn_takepicture"
+        android:layout_centerHorizontal="true"
+/>
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/gui"
+        >
+
+
+    </FrameLayout>
+    <Button
+        android:id="@+id/btn_takepicture"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:background="@mipmap/trans"
+       />
+</RelativeLayout>
