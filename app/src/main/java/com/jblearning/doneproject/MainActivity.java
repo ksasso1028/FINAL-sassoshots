@@ -1,6 +1,7 @@
 package com.jblearning.doneproject;
 
 import android.Manifest;
+import android.support.v7.app.ActionBar;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.ImageFormat;
@@ -66,7 +67,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         setContentView(R.layout.activity_main);
+
         textureView = (TextureView) findViewById(R.id.texture);
         assert textureView != null;
         textureView.setSurfaceTextureListener(textureListener);
@@ -308,7 +312,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.e(TAG, "onResume");
+
         startBackgroundThread();
         if (textureView.isAvailable()) {
             openCamera();
@@ -318,7 +322,7 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     protected void onPause() {
-        Log.e(TAG, "onPause");
+
         //closeCamera();
         stopBackgroundThread();
         super.onPause();
